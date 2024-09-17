@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 01</title>
+</head>
+<body>
+    <script>
+        //(2,5) Escreva um algoritmo que receba dois números como entrada do teclado e escreva na tela a média, a multiplicação, o maior valor e se o maior valor é par ou ímpar. A saída deverá ser no formato abaixo:
+        var n1 = Number(prompt("informe um número: "));
+        var n2 = Number(prompt("informe outro número :"));
+       
+        var media = (n1 + n2)/2
+        var multiplicação = (n1*n2) 
+        var exp = (n1**n2)
+        
+        
+         
+        document.write (`para os números ${n1} e ${n2} temos; <br>`)
+
+        if (media >=1){
+        document.write(`a média dos números é ${media}; <br>`)
+        }
+
+        document.write (`os números ${n1} e ${n2} multiplicados dão esse resultado ${multiplicação}; <br>`)
+
+        document.write (` a exponenciação dos números ${n1} e ${n2} é de ${exp}; <br>`)
+
+        if ((media %2) == 0){
+        document.write (`o maior número número é impar; <br>`)
+        }
+        else {
+        document.write (" o maior número é par; <br>")
+        }
+        
+        if (n1 > n2){
+        document.write (`o número ${n1} é maior que ${n2}`)
+        }
+        else {
+        document.write(`o número ${n2} é maior que ${n1}`)    
+        }
+
+
+    </script>
+</body>
+</html>

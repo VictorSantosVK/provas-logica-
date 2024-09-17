@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao 03</title>
+</head>
+<body>
+    <script>
+      var preçoInicial = Number(prompt("informe o valor inicial do produto"));
+      var preçoAtual = Number(prompt("informe o preço atual do produto"));
+      var preçoDesconto = Number(prompt("informe o valor do desconto"))
+     
+      var desconto = (preçoInicial*30)/100
+      var viCdesconto = (preçoinicial - desconto)
+
+      var descontoA = (preçoAtual * preçoDesconto)/100
+      var valorAcomdesconto = (preçoAtual - descontoA)
+
+      if (valorAcomdesconto <= viCdesconto){
+      document.write("black friday")
+      }
+      else {
+      document.write ("black fraude")
+      }
+
+    </script>
+</body>
+</html>

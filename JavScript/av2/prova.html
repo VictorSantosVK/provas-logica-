@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova de lógica</title>
+</head>
+
+<body>
+    <script>
+        //receber número do usuário:
+
+        var numero = Number(prompt("informe um número"));
+
+        //quantidade de divisores entre 1 e o número informado:
+        function Divisores(numero) {
+            var cont = 0
+
+            for (let i = 1; i <= numero; i++) {
+                if (numero % i === 0) {
+                    cont++
+                }
+            }
+
+            return cont
+        }
+
+        //descobrir se os números são primos:
+        function primos(numero) {
+            if (numero == 2) {
+                alert("Sim! este é um número primo")
+            }
+            if (numero != 2) {
+                alert("Não! este número não é primo")
+            }
+        }
+
+
+
+
+
+
+        //função recursiva pra informar se os números entre o intervalo são divisíveis por 2, 3, 4:
+        function Div234(numero) {
+            if (numero < 20) {
+                return []
+            }
+
+            var num234 = Div234(numero - 1)
+
+            if (numero % 2 === 0 && numero % 3 === 0 && numero % 5 === 4) {
+                num234.push(numero)
+            }
+
+            return num234
+        }
+
+
+
+        // Função para verificar se o usuário deseja realmente sair
+        function saida(sair) {
+            var sair
+            while (true) {
+                var opc = prompt("Tem certeza que quer sair [s/n]")
+                if (opc == "s") {
+                    sair = 1
+                    break
+                }
+                else if (opc == "n") {
+                    sair = 0
+                    break
+                }
+                else {
+                    alert("Digite um opção válida!")
+                }
+            }
+            return sair
+        }
+
+
+
+        //menu de opções
+        while (true) {
+
+            var carregave
+            var menu = Number(prompt("INFORME UMA DAS OPÇÕES ABAIXO: \n(1) Quantidade de divisores entre 1 e o próprio número. \n(2) o número informado é primo? \n(3) Números divisíveis por 2, 3 e 4 ao mesmo tempo, maiores que 20. \n(4) Informar outro número. \n(5) sair"))
+
+            if (menu === 1) {
+
+                alert(
+                    `Quantidade de divisores entre 1 e o próprio número. são: ${Divisores(numero)}`
+                )
+            }
+            if (menu === 2) {
+
+                alert(
+                    ` O número informado é primo? ${primos(numero)}`
+                )
+            }
+            if (menu === 3) {
+                alert(
+                    `Os números divisíveis por 2, 3 e 4 ao mesmo tempo, maiores que 20 são: ${Div234(numero)}`
+                )
+            }
+            if (menu === 4) {
+
+                alert(
+                    `Informe outro número: ${vogais(nome)}`
+                )
+            }
+            if (menu === 5) {
+
+                var saindo = saida()
+                if (saindo == 1) {
+                    alert("Até breve! Saindo.....")
+                    break
+                }
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
